@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#111b17" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MadHouse" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>MadHouse</title>
+</head>
+<body>
+  <main id="app">
+    <section id="houseView" class="screen active">
+      <div class="scene house-scene">
+        <header class="topbar">
+          <div>
+            <h1>MadHouse 🏠</h1>
+            <p>Everything under one roof</p>
+          </div>
+          <button class="icon-btn" aria-label="Settings">⚙️</button>
+        </header>
+        <div class="status-card">☀️ <strong>Home</strong><span>Your household at a glance</span></div>
+        <button class="room room-bedroom" data-room="bedroom">Bedroom</button>
+        <button class="room room-bathroom" data-room="bathroom">Bathroom</button>
+        <button class="room room-office" data-room="office">Home Office</button>
+        <button class="room room-living" data-room="living">Living Room</button>
+        <button class="room room-kitchen selected" data-room="kitchen">Kitchen</button>
+        <button class="room room-garage" data-room="garage">Garage</button>
+        <div class="bottom-nav">
+          <button class="nav-active">⌂<span>Home</span></button><button>☑<span>Tasks</span></button><button>🔔<span>Alerts</span></button><button>👤<span>Profile</span></button><button>⚙<span>Settings</span></button>
+        </div>
+      </div>
+    </section>
+    <section id="kitchenView" class="screen">
+      <div class="scene kitchen-scene">
+        <header class="room-header">
+          <button id="backBtn" class="back-btn">← House</button>
+          <div><h2>🍳 Kitchen</h2><p>Tap something in the room</p></div>
+        </header>
+        <button class="hotspot grocery" data-tool="grocery"><span>🛒</span><b>Grocery List</b></button>
+        <button class="hotspot pantry" data-tool="pantry"><span>🥫</span><b>Pantry</b></button>
+        <button class="hotspot planner" data-tool="planner"><span>👨‍🍳</span><b>Meal Planner</b></button>
+        <button class="hotspot recipes" data-tool="recipes"><span>📖</span><b>Recipes</b></button>
+        <button class="hotspot schedule" data-tool="schedule"><span>📅</span><b>Meal Schedule</b></button>
+        <div id="toolPanel" class="tool-panel"><button id="closePanel" class="panel-close">×</button><div id="panelContent"></div></div>
+        <div class="room-dock"><button data-tool="grocery">🛒<span>Groceries</span></button><button data-tool="pantry">🥫<span>Pantry</span></button><button data-tool="planner">👨‍🍳<span>Meals</span></button><button data-tool="recipes">📖<span>Recipes</span></button><button data-tool="schedule">📅<span>Schedule</span></button></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
