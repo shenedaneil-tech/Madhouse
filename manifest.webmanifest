@@ -1,0 +1,10 @@
+{
+  "name": "MadHouse",
+  "short_name": "MadHouse",
+  "description": "Everything under one roof",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#111b17",
+  "theme_color": "#111b17",
+  "icons": []
+}
