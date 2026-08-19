@@ -9,9 +9,10 @@
   <meta name="apple-mobile-web-app-title" content="MadHouse" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="generated-art.css" />
   <title>MadHouse</title>
 </head>
-<body>
+<body class="generated-art-ready">
   <main id="app">
     <section id="houseView" class="screen active">
       <div class="scene house-scene">
@@ -46,6 +47,7 @@
     <section id="kitchenView" class="screen">
       <div class="scene kitchen-scene">
         <div class="stage-visual kitchen-stage" aria-label="Interactive MadHouse kitchen">
+          <button id="artBackBtn" class="art-back-zone" aria-label="Back to house"></button>
           <div class="interaction-hint"><span class="plumbob">◆</span> Tap or click glowing objects</div>
           <button class="object-zone fridge-zone" data-tool="grocery"><span class="object-marker">◆</span><b>Fridge</b><small>Groceries</small></button>
           <button class="object-zone pantry-zone" data-tool="pantry"><span class="object-marker">◆</span><b>Pantry</b><small>Inventory</small></button>
@@ -56,7 +58,6 @@
         <header class="game-hud room-hud">
           <button id="backBtn" class="round-btn back-btn" aria-label="Back to house">←</button>
           <div class="room-title"><span>🍳</span><div><h2>Kitchen</h2><p>Tap an object to manage your home</p></div></div>
-          <span class="room-level">LV 1</span>
         </header>
         <div id="toolPanel" class="tool-panel" aria-live="polite"><div class="panel-handle"></div><button id="closePanel" class="panel-close">×</button><div id="panelContent"></div></div>
         <nav class="game-hud room-dock" aria-label="Kitchen shortcuts">
