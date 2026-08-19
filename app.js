@@ -4,27 +4,6 @@ const panel=document.getElementById('toolPanel');
 const content=document.getElementById('panelContent');
 const defaultGroceries=['Milk','Eggs','Bread'];
 
-async function loadGeneratedArtwork(){
-  const artwork=[
-    ['.house-stage','./assets/house-game.b64'],
-    ['.kitchen-stage','./assets/kitchen-game.b64']
-  ];
-  try{
-    await Promise.all(artwork.map(async([selector,url])=>{
-      const target=document.querySelector(selector);
-      if(!target)return;
-      const response=await fetch(url,{cache:'force-cache'});
-      if(!response.ok)throw new Error(`Unable to load ${url}`);
-      const data=(await response.text()).trim();
-      target.style.backgroundImage=`url("data:image/jpeg;base64,${data}")`;
-      target.classList.add('generated-art');
-    }));
-    document.body.classList.add('generated-art-ready');
-  }catch(error){
-    console.warn('Generated artwork could not be loaded. Using fallback artwork.',error);
-  }
-}
-
 function showScreen(screen){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   screen.classList.add('active');
@@ -40,14 +19,10 @@ function enterRoom(room){
   }
 }
 
-function returnToHouse(){
-  panel.classList.remove('open');
-  showScreen(houseView);
-}
+function returnToHouse(){panel.classList.remove('open');showScreen(houseView);}
 
 document.querySelectorAll('.room-zone').forEach(btn=>btn.addEventListener('click',()=>enterRoom(btn.dataset.room)));
 document.getElementById('backBtn').addEventListener('click',returnToHouse);
-document.getElementById('artBackBtn')?.addEventListener('click',returnToHouse);
 document.getElementById('closePanel').addEventListener('click',()=>panel.classList.remove('open'));
 
 function showToast(message){
@@ -84,7 +59,5 @@ function openTool(tool){
 }
 
 document.querySelectorAll('[data-tool]').forEach(btn=>btn.addEventListener('click',()=>openTool(btn.dataset.tool)));
-
-loadGeneratedArtwork();
 
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));}
