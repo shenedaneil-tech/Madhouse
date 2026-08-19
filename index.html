@@ -15,19 +15,28 @@
   <main id="app">
     <section id="houseView" class="screen active">
       <div class="scene house-scene">
+        <div class="stage-visual house-stage" aria-label="MadHouse home overview">
+          <div class="house-tip"><span class="plumbob">◆</span><div><strong>Choose a room</strong><small>Tap or click a room to enter</small></div></div>
+
+          <button class="room-zone bedroom-zone" data-room="bedroom"><span>Bedroom</span></button>
+          <button class="room-zone bathroom-zone" data-room="bathroom"><span>Bathroom</span></button>
+          <button class="room-zone office-zone" data-room="office"><span>Office</span></button>
+          <button class="room-zone living-zone" data-room="living"><span>Living Room</span></button>
+          <button class="room-zone kitchen-zone" data-room="kitchen"><span>Kitchen</span></button>
+          <button class="room-zone garage-zone" data-room="garage"><span>Garage</span></button>
+        </div>
+
         <header class="game-hud top-hud">
           <div class="brand"><div class="brand-mark">M</div><div><h1>MadHouse</h1><p>Everything under one roof</p></div></div>
           <div class="hud-actions"><span class="hud-chip">☀️ 72°</span><button class="round-btn" aria-label="Settings">⚙️</button></div>
         </header>
 
-        <div class="house-tip"><span class="plumbob">◆</span><div><strong>Choose a room</strong><small>Tap inside the house to enter</small></div></div>
-
-        <button class="room-zone bedroom-zone" data-room="bedroom"><span>Bedroom</span></button>
-        <button class="room-zone bathroom-zone" data-room="bathroom"><span>Bathroom</span></button>
-        <button class="room-zone office-zone" data-room="office"><span>Office</span></button>
-        <button class="room-zone living-zone" data-room="living"><span>Living Room</span></button>
-        <button class="room-zone kitchen-zone" data-room="kitchen"><span>Kitchen</span></button>
-        <button class="room-zone garage-zone" data-room="garage"><span>Garage</span></button>
+        <aside class="game-hud desktop-rail" aria-label="House status">
+          <div class="rail-title">Today</div>
+          <div class="rail-stat"><span>✓</span><div><strong>3 / 6</strong><small>Daily tasks</small></div></div>
+          <div class="rail-stat"><span>🍳</span><div><strong>Kitchen</strong><small>Ready to plan meals</small></div></div>
+          <div class="rail-stat"><span>🔔</span><div><strong>2 alerts</strong><small>Need attention</small></div></div>
+        </aside>
 
         <nav class="game-hud bottom-hud" aria-label="Main navigation">
           <button class="nav-active"><b>⌂</b><span>Home</span></button>
@@ -41,19 +50,21 @@
 
     <section id="kitchenView" class="screen">
       <div class="scene kitchen-scene">
+        <div class="stage-visual kitchen-stage" aria-label="Interactive MadHouse kitchen">
+          <div class="interaction-hint"><span class="plumbob">◆</span> Tap or click glowing objects</div>
+
+          <button class="object-zone fridge-zone" data-tool="grocery" aria-label="Open grocery list"><span class="object-marker">◆</span><b>Fridge</b><small>Groceries</small></button>
+          <button class="object-zone pantry-zone" data-tool="pantry" aria-label="Open pantry"><span class="object-marker">◆</span><b>Pantry</b><small>Inventory</small></button>
+          <button class="object-zone stove-zone" data-tool="planner" aria-label="Open meal planner"><span class="object-marker">◆</span><b>Stove</b><small>Meal planner</small></button>
+          <button class="object-zone recipe-zone" data-tool="recipes" aria-label="Open recipes"><span class="object-marker">◆</span><b>Recipe Book</b><small>Recipes</small></button>
+          <button class="object-zone table-zone" data-tool="schedule" aria-label="Open meal schedule"><span class="object-marker">◆</span><b>Dining Table</b><small>Meal schedule</small></button>
+        </div>
+
         <header class="game-hud room-hud">
           <button id="backBtn" class="round-btn back-btn" aria-label="Back to house">←</button>
           <div class="room-title"><span>🍳</span><div><h2>Kitchen</h2><p>Tap an object to manage your home</p></div></div>
           <span class="room-level">LV 1</span>
         </header>
-
-        <div class="interaction-hint"><span class="plumbob">◆</span> Interactive objects glow when ready</div>
-
-        <button class="object-zone fridge-zone" data-tool="grocery" aria-label="Open grocery list"><span class="object-marker">◆</span><b>Fridge</b><small>Groceries</small></button>
-        <button class="object-zone pantry-zone" data-tool="pantry" aria-label="Open pantry"><span class="object-marker">◆</span><b>Pantry</b><small>Inventory</small></button>
-        <button class="object-zone stove-zone" data-tool="planner" aria-label="Open meal planner"><span class="object-marker">◆</span><b>Stove</b><small>Meal planner</small></button>
-        <button class="object-zone recipe-zone" data-tool="recipes" aria-label="Open recipes"><span class="object-marker">◆</span><b>Recipe Book</b><small>Recipes</small></button>
-        <button class="object-zone table-zone" data-tool="schedule" aria-label="Open meal schedule"><span class="object-marker">◆</span><b>Dining Table</b><small>Meal schedule</small></button>
 
         <div id="toolPanel" class="tool-panel" aria-live="polite">
           <div class="panel-handle"></div>
