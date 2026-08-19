@@ -1,0 +1,1 @@
+Clean image reset in progress. Legacy base64 and duplicate WebP aliases removed. The final House and Kitchen assets must be uploaded as genuine JPEG binaries before the UI is re-enabled.
