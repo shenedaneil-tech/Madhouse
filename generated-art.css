@@ -1,69 +1,16 @@
-:root{--stage-ratio:.5628}
-
-/* The generated game artwork is the visual source of truth. */
-.stage-visual{aspect-ratio:941/1672;background-size:100% 100%;background-position:center;background-repeat:no-repeat}
-
-.art-back-zone{display:none}
-
-.generated-art-ready .scene{display:block!important;padding:0!important;background:radial-gradient(circle at 50% 44%,#183127 0,#07110d 70%)!important}
-.generated-art-ready .scene::after{background:radial-gradient(circle at 50% 48%,transparent 48%,rgba(1,6,4,.42) 100%)!important}
-.generated-art-ready .stage-visual{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:min(100vw,calc(100dvh * var(--stage-ratio)))!important;height:auto!important;aspect-ratio:941/1672!important;border-radius:0!important;box-shadow:0 30px 90px rgba(0,0,0,.58)!important}
-
-/* The artwork already contains the HUD, room labels, navigation and markers. */
-.generated-art-ready .top-hud,
-.generated-art-ready .bottom-hud,
-.generated-art-ready .room-hud,
-.generated-art-ready .room-dock,
-.generated-art-ready .desktop-rail,
-.generated-art-ready .house-tip,
-.generated-art-ready .interaction-hint{display:none!important}
-
-.generated-art-ready .room-zone span,
-.generated-art-ready .object-zone .object-marker,
-.generated-art-ready .object-zone b,
-.generated-art-ready .object-zone small{display:none!important}
-
-.generated-art-ready .room-zone,
-.generated-art-ready .object-zone{background:transparent!important}
-.generated-art-ready .room-zone::after{inset:0;border-radius:18px}
-.generated-art-ready .room-zone:hover::after,
-.generated-art-ready .room-zone:focus-visible::after{border-color:rgba(255,211,75,.92)!important;box-shadow:0 0 0 4px rgba(255,211,75,.12),inset 0 0 36px rgba(255,211,75,.12)!important}
-
-/* Coordinates aligned to the generated house artwork. */
-.generated-art-ready .bedroom-zone{left:7%;top:18%;width:35%;height:18%}
-.generated-art-ready .bathroom-zone{left:40%;top:17%;width:25%;height:19%}
-.generated-art-ready .office-zone{left:64%;top:18%;width:30%;height:21%}
-.generated-art-ready .living-zone{left:5%;top:37%;width:38%;height:23%}
-.generated-art-ready .kitchen-zone{left:39%;top:36%;width:32%;height:28%}
-.generated-art-ready .garage-zone{left:68%;top:39%;width:29%;height:24%}
-
-/* Coordinates aligned to the generated Kitchen artwork. */
-.generated-art-ready .fridge-zone{left:2%;top:28%;width:24%;height:21%}
-.generated-art-ready .pantry-zone{left:28%;top:17%;width:24%;height:17%}
-.generated-art-ready .stove-zone{left:51%;top:21%;width:25%;height:19%}
-.generated-art-ready .recipe-zone{left:72%;top:24%;width:27%;height:18%}
-.generated-art-ready .table-zone{left:31%;top:38%;width:39%;height:21%}
-
-.generated-art-ready .art-back-zone{display:block;position:absolute;z-index:30;left:1.5%;top:1.2%;width:23%;height:5.8%;border:0;border-radius:999px;background:transparent;cursor:pointer}
-.generated-art-ready .art-back-zone:hover,.generated-art-ready .art-back-zone:focus-visible{outline:2px solid rgba(255,211,75,.7);outline-offset:-2px;background:rgba(255,211,75,.06)}
-
-/* Match the dark, warm panel treatment in the generated Kitchen design. */
-.generated-art-ready .tool-panel{left:12px;right:12px;bottom:9.5%;max-height:54vh;background:linear-gradient(180deg,rgba(36,28,20,.98),rgba(22,18,14,.98));color:#fff4df;border:1px solid rgba(255,215,120,.24);box-shadow:0 24px 70px rgba(0,0,0,.62);border-radius:24px;padding:26px 18px 18px}
-.generated-art-ready .tool-panel h3{color:#fff7e8}
-.generated-art-ready .tool-panel p{color:#d7c9b4}
-.generated-art-ready .panel-handle{background:#8e7757}
-.generated-art-ready .panel-close{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.12)}
-.generated-art-ready .tool-panel input{background:#f4e5c9;border-color:#ad966f;color:#2c251d}
-.generated-art-ready .add-row button{background:linear-gradient(180deg,#6e8644,#48632d)}
-.generated-art-ready .grocery-list li,.generated-art-ready .empty-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.09);color:#f8ead3}
-.generated-art-ready .grocery-list button{color:#d7c9b4}
-
-@media(min-width:768px){
-  .generated-art-ready .stage-visual{height:min(96dvh,1080px)!important;width:auto!important;border-radius:24px!important;box-shadow:0 34px 100px rgba(0,0,0,.72),0 0 0 1px rgba(255,255,255,.08)!important}
-  .generated-art-ready .tool-panel{left:auto;right:max(24px,calc((100vw - min(96dvh,1080px)*.5628)/2 - 380px));bottom:auto;top:16%;width:360px;max-height:68vh;transform:translateX(120%);border-radius:26px}
-  .generated-art-ready .tool-panel.open{transform:translateX(0)}
-}
-
-@media(min-width:1200px){
-  .generated-art-ready .scene{background:radial-gradient(circle at center,#213b30 0,#0b1813 48%,#040a07 100%)!important}
-}
+/* Generated MadHouse art is the scene itself, not a phone mockup inside a webpage. */
+.generated-art-ready .scene{display:block!important;padding:0!important;background:#07110d!important}
+.generated-art-ready .scene::after{background:linear-gradient(to bottom,rgba(2,8,6,.16),transparent 18%,transparent 74%,rgba(2,8,6,.28))!important}
+.generated-art-ready .stage-visual{position:absolute!important;inset:0!important;left:0!important;top:0!important;transform:none!important;width:100vw!important;height:100dvh!important;aspect-ratio:auto!important;border-radius:0!important;box-shadow:none!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.generated-art-ready .top-hud,.generated-art-ready .bottom-hud,.generated-art-ready .room-hud,.generated-art-ready .room-dock,.generated-art-ready .desktop-rail,.generated-art-ready .house-tip,.generated-art-ready .interaction-hint{display:none!important}
+.generated-art-ready .room-zone span,.generated-art-ready .object-zone .object-marker,.generated-art-ready .object-zone b,.generated-art-ready .object-zone small{display:none!important}
+.generated-art-ready .room-zone,.generated-art-ready .object-zone{background:transparent!important}
+.generated-art-ready .room-zone::after{inset:0;border-radius:20px}
+.generated-art-ready .room-zone:hover::after,.generated-art-ready .room-zone:focus-visible::after{border-color:rgba(255,211,75,.95)!important;box-shadow:0 0 0 4px rgba(255,211,75,.12),inset 0 0 42px rgba(255,211,75,.14)!important}
+.generated-art-ready .bedroom-zone{left:7%;top:18%;width:35%;height:18%}.generated-art-ready .bathroom-zone{left:40%;top:17%;width:25%;height:19%}.generated-art-ready .office-zone{left:64%;top:18%;width:30%;height:21%}.generated-art-ready .living-zone{left:5%;top:37%;width:38%;height:23%}.generated-art-ready .kitchen-zone{left:39%;top:36%;width:32%;height:28%}.generated-art-ready .garage-zone{left:68%;top:39%;width:29%;height:24%}
+.generated-art-ready .fridge-zone{left:2%;top:28%;width:24%;height:21%}.generated-art-ready .pantry-zone{left:28%;top:17%;width:24%;height:17%}.generated-art-ready .stove-zone{left:51%;top:21%;width:25%;height:19%}.generated-art-ready .recipe-zone{left:72%;top:24%;width:27%;height:18%}.generated-art-ready .table-zone{left:31%;top:38%;width:39%;height:21%}
+.generated-art-ready .art-back-zone{display:block;position:absolute;z-index:30;left:1.5%;top:1.2%;width:23%;height:6%;border:0;border-radius:999px;background:transparent;cursor:pointer}.generated-art-ready .art-back-zone:hover,.generated-art-ready .art-back-zone:focus-visible{outline:2px solid rgba(255,211,75,.72);outline-offset:-2px;background:rgba(255,211,75,.05)}
+.generated-art-ready .tool-panel{left:12px;right:12px;bottom:2.5%;max-height:55vh;background:linear-gradient(180deg,rgba(36,28,20,.98),rgba(22,18,14,.98));color:#fff4df;border:1px solid rgba(255,215,120,.24);box-shadow:0 24px 70px rgba(0,0,0,.62);border-radius:24px;padding:26px 18px 18px}
+.generated-art-ready .tool-panel h3{color:#fff7e8}.generated-art-ready .tool-panel p{color:#d7c9b4}.generated-art-ready .panel-handle{background:#8e7757}.generated-art-ready .panel-close{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.12)}.generated-art-ready .tool-panel input{background:#f4e5c9;border-color:#ad966f;color:#2c251d}.generated-art-ready .add-row button{background:linear-gradient(180deg,#6e8644,#48632d)}.generated-art-ready .grocery-list li,.generated-art-ready .empty-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.09);color:#f8ead3}.generated-art-ready .grocery-list button{color:#d7c9b4}
+@media(min-width:768px){.generated-art-ready .stage-visual{width:100vw!important;height:100dvh!important;background-size:cover!important;background-position:center center!important}.generated-art-ready .tool-panel{left:auto;right:24px;top:10%;bottom:10%;width:min(380px,31vw);max-height:none;transform:translateX(120%);border-radius:28px}.generated-art-ready .tool-panel.open{transform:translateX(0)}.generated-art-ready .panel-handle{display:none}}
+@media(min-aspect-ratio:16/10){.generated-art-ready .house-stage{background-position:center 48%!important}.generated-art-ready .kitchen-stage{background-position:center 46%!important}}
