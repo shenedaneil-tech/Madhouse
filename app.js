@@ -4,6 +4,9 @@ const panel=document.getElementById('toolPanel');
 const content=document.getElementById('panelContent');
 const defaultGroceries=['Milk','Eggs','Bread'];
 
+// The generated WebP artwork now lives in the repo as real image files.
+document.body.classList.add('generated-art-ready');
+
 function showScreen(screen){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   screen.classList.add('active');
@@ -23,6 +26,7 @@ function returnToHouse(){panel.classList.remove('open');showScreen(houseView);}
 
 document.querySelectorAll('.room-zone').forEach(btn=>btn.addEventListener('click',()=>enterRoom(btn.dataset.room)));
 document.getElementById('backBtn').addEventListener('click',returnToHouse);
+document.getElementById('artBackBtn')?.addEventListener('click',returnToHouse);
 document.getElementById('closePanel').addEventListener('click',()=>panel.classList.remove('open'));
 
 function showToast(message){
